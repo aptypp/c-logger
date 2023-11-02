@@ -7,7 +7,6 @@
 
 int main()
 {
-    LOG_INFO(stdout, "hello info %s\n", "arg");
-    logger_info(stdout, "hello info %s\n", "arg");
-    logger_error(stdout, "hello error %d\n", 1);
+    printf("%s", COLOR_RED);
+    printf("sadas");
 }

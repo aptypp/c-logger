@@ -18,23 +18,3 @@ void logger_log(FILE* file, const char* color, const char* message, va_list* arg
 
     vfprintf(file, buffer, *args);
 }
-
-void logger_info(FILE* file, const char* message, ...)
-{
-    va_list args;
-    va_start(args, message);
-
-    logger_log(file, COLOR_YELLOW, message, &args);
-
-    va_end(args);
-}
-
-void logger_error(FILE* file, const char* message, ...)
-{
-    va_list args;
-    va_start(args, message);
-
-    logger_log(file, COLOR_RED, message, &args);
-
-    va_end(args);
-}

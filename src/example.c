@@ -7,5 +7,6 @@
 
 int main()
 {
-    LOG_INFO(stdout, "asd")
+    LOG_INFO(stdout, "asd");
+    LOG_ERROR(stdout, "asd");
 }

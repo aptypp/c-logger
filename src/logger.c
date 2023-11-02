@@ -4,7 +4,7 @@
 #include <string.h>
 #include "logger.h"
 
-void logger_log(FILE* file, const char* color, const char* message, ...)
+void logger_log(FILE* file, const char* type, const char* message, ...)
 {
     char buffer[strlen(message) + 64];
 
@@ -17,7 +17,7 @@ void logger_log(FILE* file, const char* color, const char* message, ...)
     va_list args;
     va_start(args, message);
 
-    sprintf(buffer, "%s%02d:%02d:%02d %s%s", color, time_info->tm_hour, time_info->tm_min, time_info->tm_sec, message, COLOR_DEFAULT);
+    sprintf(buffer, "%s%02d:%02d:%02d %s\n", type, time_info->tm_hour, time_info->tm_min, time_info->tm_sec, message);
 
     vfprintf(file, buffer, args);
 }

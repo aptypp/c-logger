@@ -7,6 +7,5 @@
 
 int main()
 {
-    printf("%s", COLOR_RED);
-    printf("sadas");
+    LOG_INFO(stdout, "asd")
 }

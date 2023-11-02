@@ -6,11 +6,11 @@
 #define COLOR_DEFAULT "\x1b[0m"
 
 #define LOG_INFO(file, message, ...) \
-    logger_log(file, COLOR_YELLOW, message, __VA_ARGS__); \
+    logger_log(file, COLOR_YELLOW, message, ##__VA_ARGS__); \
 
 #define LOG_ERROR(file, message, ...) \
     logger_log(file, COLOR_RED, message, __VA_ARGS__); \
 
-void logger_log(FILE* file, const char* color, const char* message, va_list* args);
+void logger_log(FILE* file, const char* color, const char* message, ...);
 
 #endif //C_LOGGER_LOGGER_H
